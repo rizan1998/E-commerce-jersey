@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateLigasTable extends Migration
+class CreatePesanansTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,13 @@ class CreateLigasTable extends Migration
      */
     public function up()
     {
-        Schema::create('ligas', function (Blueprint $table) {
+        Schema::create('pesanans', function (Blueprint $table) {
             $table->id();
-            $table->string('nama', 30);
-            $table->string('negara', 20);
-            $table->string('gambar', 255);
+            $table->string('kode_pemesanan');
+            $table->string('status')->default(0);
+            $table->integer('total_harga');
+            $table->integer('kode_unik');
+            $table->integer('user_id');
             $table->timestamps();
         });
     }
@@ -29,6 +31,6 @@ class CreateLigasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ligas');
+        Schema::dropIfExists('pesanans');
     }
 }
