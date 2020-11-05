@@ -1,9 +1,8 @@
-<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+<nav class="navbar navbar-expand-md navbar-light bg-white shadow">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
-            {{ config('app.name', 'Laravel') }}
+           Jersey<strong>Pedia</strong>
         </a>
-        <a class="nav-link" href="{{ route('home') }}">Home</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -11,7 +10,19 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
-
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('home') }}">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">List Jersey</a>
+                    <div class="dropdown-menu">
+                        @foreach ($ligas as $liga)
+                        <a class="dropdown-item" href="#one">{{$liga->nama}}</a>
+                        @endforeach
+                        <div role="separator" class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#three">Semua Liga</a>
+                    </div>
+                </li>
             </ul>
 
             <!-- Right Side Of Navbar -->
