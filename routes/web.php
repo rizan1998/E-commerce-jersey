@@ -17,6 +17,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// home
+Route::get('/home', App\Http\Livewire\Home\HomeJerseyPedia::class)->name('home');
+
+
+
+
+
+// auth
+Auth::routes();
