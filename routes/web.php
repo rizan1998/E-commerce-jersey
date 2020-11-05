@@ -20,6 +20,8 @@ Route::get('/', function () {
 
 // home
 Route::get('/home', App\Http\Livewire\Home\HomeJerseyPedia::class)->name('home');
+Route::get('/Poduct', App\Http\Livewire\ProductIndex::class)->name('product');
+
 
 
 

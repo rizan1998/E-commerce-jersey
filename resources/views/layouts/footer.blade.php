@@ -1,5 +1,4 @@
 <footer >
-    <hr>
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center copyright">

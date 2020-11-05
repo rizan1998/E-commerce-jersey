@@ -20,7 +20,7 @@
                         <a class="dropdown-item" href="#one">{{$liga->nama}}</a>
                         @endforeach
                         <div role="separator" class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#three">Semua Liga</a>
+                        <a class="dropdown-item" href="{{Route('product')}}">Semua Liga</a>
                     </div>
                 </li>
             </ul>
