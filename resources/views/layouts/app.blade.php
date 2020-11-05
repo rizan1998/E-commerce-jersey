@@ -31,7 +31,7 @@
             {{-- <livewire:home.home-jersey-pedia /> --}}
         </main>
     </div>
-
+    @include('layouts.footer')
     @livewireScripts
 </body>
 </html>

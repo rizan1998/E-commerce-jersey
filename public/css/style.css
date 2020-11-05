@@ -1,3 +1,29 @@
-body{
-    font-family: 'Montserrat', sans-serif;
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: white;
+}
+
+.banner img {
+    width: 100%;
+    border-radius: 35px;
+}
+
+.pilih-liga img {
+    height: 100px;
+}
+
+.pilih-liga .card {
+    border-radius: 20px;
+}
+
+.best-products .card {
+    border-radius: 20px;
+}
+
+footer {
+    margin-top: 200px;
+}
+
+footer .copyright {
+    padding: 20px;
 }
