@@ -19,9 +19,12 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('fontawesome/css/all.min.css') }}" rel="stylesheet">
+
 
 
     @livewireStyles
+    @livewireScripts
 </head>
 <body>
     <div id="app">
@@ -32,6 +35,6 @@
         </main>
     </div>
     @include('layouts.footer')
-    @livewireScripts
+    
 </body>
 </html>

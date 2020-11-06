@@ -16,14 +16,24 @@ body {
     border-radius: 20px;
 }
 
-.best-products .card {
+.products .card {
     border-radius: 20px;
 }
 
-footer {
+/* footer {
     margin-top: 500px;
-}
+} */
 
 footer .copyright {
     padding: 20px;
+}
+
+.breadcrumb {
+    background: transparent;
+    padding: 0;
+}
+
+.breadcrumb .active {
+    font-weight: bold;
+    color: black;
 }

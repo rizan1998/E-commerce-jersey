@@ -20,7 +20,7 @@
       </div>
    </section>
 
-    {{-- best Product --}}
+    {{--Products --}}
     <section class="best-products mt-4">
       <h3><strong>Best Products</strong></h3>
       <div class="row mt-4">
@@ -48,5 +48,8 @@
          @endforeach
       </div>
    </section>
+   {{-- end products --}}
+
+   
 {{-- end container --}}
 </div>
