@@ -11,9 +11,16 @@ class ProductIndex extends Component
     //use WthPagination;
     // protected $paginationTheme = 'bootstrap';
 
+    public $search;
+    protected $queryString = ['search'];
+
     public function render()
     {
-        $products = Product::paginate(6);
+        if ($this->search) {
+            $products = Product::where('nama', 'like', '%' . $this->search . '%')->paginate(6);
+        } else {
+            $products = Product::paginate(6);
+        }
         return view('livewire.product-index', compact('products'))
             ->extends('layouts.app');
     }

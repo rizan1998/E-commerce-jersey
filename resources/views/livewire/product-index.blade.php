@@ -11,11 +11,11 @@
               {{-- end bread crumb --}}
         </div>
     </div>
-       <div class="d-flex justify-content-between align-content-center">
-          <div class="col">
+       <div class="d-flex justify-content-between align-content-center align-content-center">
+          <div class="col-8">
              <h2 class="mt-3" >List<Strong>Jersey</Strong></h2>
           </div>
-          <div class="col">
+          <div class="col-4">
              <div class="input-group">
                <input type="text" wire:model="search" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1">
                <div class="input-group-prepend">
@@ -44,7 +44,7 @@
                     </div>
                     <div class="row mt-2">
                        <div class="col-md-12">
-                          <a href="" class="btn btn-dark btn-lg btn-block"> detail</a>
+                          <a href="" class="btn btn-dark btn-lg btn-block"><li class="fas fa-eye"></li> detail</a>
                        </div>
                     </div>
                  </div>
