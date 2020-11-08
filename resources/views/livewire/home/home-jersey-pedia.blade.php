@@ -10,11 +10,13 @@
       <div class="row mt-4">
          @foreach ($ligas as $liga)    
          <div class="col-3">
+            <a href="{{route('product.liga', $liga->id)}}">
             <div class="card shadow">
                <div class="card-body d-flex justify-content-center">
                   <img src="{{ asset('assets/liga')}}/{{$liga->gambar}}" class="img-fluid" alt="">
                </div>
             </div>
+         </a>
          </div>
          @endforeach
       </div>
@@ -42,7 +44,7 @@
                   </div>
                   <div class="row">
                      <div class="col-md-12">
-                        <a href="" class="btn btn-dark btn-lg btn-block"><li class="fas fa-eye"></li> detail</a>
+                        <a href="{{route('product.detail', $product->id)}}" class="btn btn-dark btn-lg btn-block"><li class="fas fa-eye"></li> detail</a>
                      </div>
                   </div>
                </div>

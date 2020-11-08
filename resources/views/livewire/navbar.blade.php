@@ -17,7 +17,7 @@
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">List Jersey</a>
                     <div class="dropdown-menu">
                         @foreach ($ligas as $liga)
-                        <a class="dropdown-item" href="#one">{{$liga->nama}}</a>
+                        <a class="dropdown-item" href="{{route('product.liga', $liga->id)}}">{{$liga->nama}}</a>
                         @endforeach
                         <div role="separator" class="dropdown-divider"></div>
                         <a class="dropdown-item" href="{{Route('product')}}">Semua Liga</a>

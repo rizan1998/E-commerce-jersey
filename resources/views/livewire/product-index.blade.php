@@ -13,7 +13,7 @@
     </div>
        <div class="d-flex justify-content-between align-content-center align-content-center">
           <div class="col-8">
-             <h2 class="mt-3" >List<Strong>Jersey</Strong></h2>
+             <h2 class="mt-3" >list Jersey<strong>{{$title}}</strong></h2>
           </div>
           <div class="col-4">
              <div class="input-group">
@@ -44,7 +44,7 @@
                     </div>
                     <div class="row mt-2">
                        <div class="col-md-12">
-                          <a href="" class="btn btn-dark btn-lg btn-block"><li class="fas fa-eye"></li> detail</a>
+                        <a href="{{route('product.detail', $product->id)}}" class="btn btn-dark btn-lg btn-block"><li class="fas fa-eye"></li> detail</a>
                        </div>
                     </div>
                  </div>

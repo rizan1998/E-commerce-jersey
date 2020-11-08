@@ -14,6 +14,11 @@ class ProductIndex extends Component
     public $search;
     protected $queryString = ['search'];
 
+    public function updateingSearch()
+    {
+        $this->resetPage();
+    }
+
     public function render()
     {
         if ($this->search) {
@@ -21,6 +26,7 @@ class ProductIndex extends Component
         } else {
             $products = Product::paginate(6);
         }
+        $title = '';
         return view('livewire.product-index', compact('products'))
             ->extends('layouts.app');
     }
