@@ -27,7 +27,7 @@ class ProductIndex extends Component
             $products = Product::paginate(6);
         }
         $title = '';
-        return view('livewire.product-index', compact('products'))
+        return view('livewire.product-index', compact('products', 'title'))
             ->extends('layouts.app');
     }
 }

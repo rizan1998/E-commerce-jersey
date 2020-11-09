@@ -37,3 +37,9 @@ footer .copyright {
     font-weight: bold;
     color: black;
 }
+
+.gambar-product {
+    background-color: #eaeaea;
+    border-width: 0;
+    border-radius: 20;
+}
