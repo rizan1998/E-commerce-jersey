@@ -8,13 +8,14 @@ use Livewire\WithPagination;
 
 class ProductIndex extends Component
 {
-    //use WthPagination;
-    // protected $paginationTheme = 'bootstrap';
+    use WithPagination;
+    protected $paginationTheme = 'bootstrap';
 
     public $search;
     protected $queryString = ['search'];
 
-    public function updateingSearch()
+    // untuk reset page
+    public function updatingSearch()
     {
         $this->resetPage();
     }
@@ -23,7 +24,7 @@ class ProductIndex extends Component
     {
         if ($this->search) {
             $products = Product::where('nama', 'like', '%' . $this->search . '%')->paginate(6);
-        } else {
+        } elseif ($this->search == null) {
             $products = Product::paginate(6);
         }
         $title = '';

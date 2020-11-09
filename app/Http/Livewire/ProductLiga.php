@@ -5,17 +5,24 @@ namespace App\Http\Livewire;
 use App\Liga;
 use App\Product;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class ProductLiga extends Component
 {
+    use WithPagination;
+    protected $paginationTheme = 'bootstrap';
 
-    public $search, $liga;
-    protected $queryString = ['search'];
+    public $liga;
+    public $foo;
+    public $search = '';
+    public $page = 1;
+    // protected $queryString = ['search'];
 
-    public function updateingSearch()
-    {
-        $this->resetPage();
-    }
+    // public function updatingSearch()
+    // {
+    //     $this->resetPage();
+    // }
+
 
     public function mount($id)
     {
@@ -25,6 +32,8 @@ class ProductLiga extends Component
         } else {
             dd($ligaDetail);
         }
+
+        $this->fill(request()->only('search', 'page'));
     }
 
     public function render()

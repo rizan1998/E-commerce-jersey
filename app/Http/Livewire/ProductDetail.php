@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Product;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
 class ProductDetail extends Component
@@ -22,6 +23,20 @@ class ProductDetail extends Component
             dd($productDetail);
         }
     }
+
+    // untuk menampung inputan
+    public function masukkanKeranjang()
+    {
+        // dd('berhasil');
+        $this->validate([
+            'jumlah_pesanan' => 'required'
+        ]);
+        //validasi jika belum login
+        if (!Auth::user()) {
+            return redirect()->route('login');
+        }
+    }
+
 
     public function render()
     {
