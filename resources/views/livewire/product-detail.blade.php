@@ -14,6 +14,15 @@
               {{-- end bread crumb --}}
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-12">
+            @if (session()->has('message'))
+                <div class="alert alert-success">
+                      {{session('message')}}  
+                </div>                
+            @endif
+        </div>
+    </div>
     {{-- content --}}
     <div class="row">
         <div class="col-lg-6">
