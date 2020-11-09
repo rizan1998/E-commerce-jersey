@@ -38,6 +38,14 @@
                         </li>
                     @endif
                 @else
+                <li class="nav-item d-flex align-content-center">
+                    <a class="nav-link" href="{{ route('register') }}">
+                        Keranjang  <span class="fas fa-shopping-bag"></span>
+                        @if ($jumlah_pesanan !==0)
+                        <span class="badge badge-danger">{{$jumlah_pesanan}}</span>
+                        @endif
+                    </a>
+                </li>
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }}
@@ -55,6 +63,7 @@
                             </form>
                         </div>
                     </li>
+                    
                 @endguest
             </ul>
         </div>

@@ -75,6 +75,8 @@ class ProductDetail extends Component
             'total_harga' => $total_harga
         ]);
 
+        // interaksi antara 2 component
+        $this->emit('masukkeranjang');
         session()->flash('message', 'Sukses Masuk Keranjang');
     }
 
