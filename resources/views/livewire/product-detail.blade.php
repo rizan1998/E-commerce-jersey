@@ -79,6 +79,7 @@
                                     @enderror
                                 </td>
                             </tr>
+                            <h5>{{$jumlah_pesanan}}</h5>
                             @if($jumlah_pesanan > 1)
                             @else
                             <tr>
