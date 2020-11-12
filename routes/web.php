@@ -23,6 +23,7 @@ Route::get('/Product/liga/{id}', App\Http\Livewire\ProductLiga::class)->name('pr
 Route::get('/Product/detail/{id}', App\Http\Livewire\ProductDetail::class)->name('product.detail');
 Route::get('/Keranjang', App\Http\Livewire\Keranjang::class)->name('keranjang');
 Route::get('/Checkout', App\Http\Livewire\Checkout::class)->name('checkout');
+Route::get('/History', App\Http\Livewire\History::class)->name('history');
 
 
 
