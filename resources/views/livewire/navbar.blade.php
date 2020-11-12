@@ -39,7 +39,7 @@
                     @endif
                 @else
                 <li class="nav-item d-flex align-content-center">
-                    <a class="nav-link" href="{{ route('register') }}">
+                    <a class="nav-link" href="{{ route('keranjang') }}">
                         Keranjang  <span class="fas fa-shopping-bag"></span>
                         @if ($jumlah_pesanan !==0)
                         <span class="badge badge-danger">{{$jumlah_pesanan}}</span>
