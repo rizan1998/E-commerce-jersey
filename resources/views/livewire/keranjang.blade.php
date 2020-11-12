@@ -116,6 +116,14 @@
                             </td>
                             <td></td>
                         </tr>
+                        <tr>
+                            <td colspan="6"></td>
+                            <td colspan="2">
+                                <a href="{{route('checkout')}}" class="btn btn-success btn-blok">
+                                    <i class="fas fa-arrow-right"></i> Check Out
+                                </a>
+                            </td>
+                        </tr>
                         @endif
                     </tbody>
                 </table>
